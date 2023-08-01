@@ -11,7 +11,7 @@ export default function tasksReducer(users,action)
                     id:action.id,
                     name:action.name,
                     number:action.number,
-                    email:action.mail
+                    mail:action.mail
                 },
             ];
         }
