@@ -21,6 +21,17 @@ export default function tasksReducer(users,action)
                 users.filter((user) => user.id !== action.id)
             );
         }
+
+        case 'changed' : {
+            return (
+                users.map((user) => { if (user.id === action.user.id)
+                    return {...user,
+                        ...action.user}
+                else {
+                    return user
+                }
+            }))
+        }
     }
     
 
